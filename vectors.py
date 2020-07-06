@@ -19,3 +19,12 @@ class Vector():
 
     def getC(self):
         return self.__c
+
+    def setA(self, a):
+        self.__a = a
+
+    def setB(self, b):
+        self.__b = b
+
+    def setC(self, c):
+        self.__c = c
