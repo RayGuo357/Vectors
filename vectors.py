@@ -11,23 +11,23 @@ class Vector():
             self.__y = y
             self.__z = z
 
-    def getX(self):
+    def get_x(self):
         return self.__x
 
-    def getY(self):
+    def get_y(self):
         return self.__y
 
-    def getZ(self):
+    def get_z(self):
         return self.__z
 
-    def setX(self, x):
+    def set_x(self, x):
         self.__x = x
 
-    def setY(self, y):
+    def set_y(self, y):
         self.__y = y
 
-    def setZ(self, z):
+    def set_z(self, z):
         self.__z = z
 
-    def printVector(self):
-        print("<" + str(self.getX()) + ", " + str(self.getY()) + ", " + str(self.getZ()) + ">")
+    def print_vector(self):
+        print("<" + str(self.get_x()) + ", " + str(self.get_y()) + ", " + str(self.get_z()) + ">")

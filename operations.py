@@ -1,24 +1,24 @@
 from vectors import Vector
 
-def dotProduct(v1: Vector, v2: Vector) -> int:
+def dot_product(v1: Vector, v2: Vector) -> int:
     if not isinstance(v1, Vector):
         raise TypeError("v1 must be a vector")
     elif not isinstance(v2, Vector):
         raise TypeError("v2 must be a vector")
     else:
         product = 0
-        product += v1.getA() * v2.getA()
-        product += v1.getB() * v2.getB()
-        product += v1.getC() * v2.getC()
+        product += v1.get_a() * v2.get_a()
+        product += v1.get_b() * v2.get_b()
+        product += v1.get_c() * v2.get_c()
         return product
 
-def crossProduct(v1: Vector, v2: Vector) -> Vector:
+def cross_product(v1: Vector, v2: Vector) -> Vector:
     if not isinstance(v1, Vector):
         raise TypeError("v1 must be a vector")
     elif not isinstance(v2, Vector):
         raise TypeError("v2 must be a vector")
     else:
-        x = (v1.getY() * v2.getZ()) - (v1.getZ() * v2.getY())
-        y = (v1.getZ() * v2.getX()) - (v1.getX() * v2.getZ())
-        z = (v1.getX() * v2.getY()) - (v1.getY() * v2.getX())
+        x = (v1.get_y() * v2.get_z()) - (v1.get_z() * v2.get_y())
+        y = (v1.get_z() * v2.get_x()) - (v1.get_x() * v2.get_z())
+        z = (v1.get_x() * v2.get_y()) - (v1.get_y() * v2.get_x())
         return Vector(x, y, z)
