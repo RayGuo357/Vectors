@@ -1,11 +1,11 @@
 class Vector():
     def __init__(self, x: int, y: int, z: int):
-        if not isinstance(a, int):
-            raise TypeError("'a' must be an integer")
-        elif not isinstance(b, int):
-            raise TypeError("'b' must be an integer")
-        elif not isinstance(c, int):
-            raise TypeError("'c' must be an integer")
+        if not isinstance(x, int):
+            raise TypeError("'x' must be an integer")
+        elif not isinstance(y, int):
+            raise TypeError("'y' must be an integer")
+        elif not isinstance(z, int):
+            raise TypeError("'z' must be an integer")
         else:
             self.__x = x
             self.__y = y
