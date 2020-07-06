@@ -1,5 +1,5 @@
 class Vector():
-    def __init__(self, a: int, b: int, c: int):
+    def __init__(self, x: int, y: int, z: int):
         if not isinstance(a, int):
             raise TypeError("'a' must be an integer")
         elif not isinstance(b, int):
@@ -7,24 +7,24 @@ class Vector():
         elif not isinstance(c, int):
             raise TypeError("'c' must be an integer")
         else:
-            self.__a = a
-            self.__b = b
-            self.__c = c
+            self.__x = x
+            self.__y = y
+            self.__z = z
 
-    def getA(self):
-        return self.__a
+    def getX(self):
+        return self.__x
 
-    def getB(self):
-        return self.__b
+    def getY(self):
+        return self.__y
 
-    def getC(self):
-        return self.__c
+    def getZ(self):
+        return self.__z
 
-    def setA(self, a):
-        self.__a = a
+    def setX(self, x):
+        self.__x = x
 
-    def setB(self, b):
-        self.__b = b
+    def setY(self, y):
+        self.__y = y
 
-    def setC(self, c):
-        self.__c = c
+    def setZ(self, z):
+        self.__z = z
