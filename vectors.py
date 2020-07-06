@@ -28,3 +28,6 @@ class Vector():
 
     def setZ(self, z):
         self.__z = z
+
+    def printVector(self):
+        print("<" + str(self.getX()) + ", " + str(self.getY()) + ", " + str(self.getZ()) + ">")
