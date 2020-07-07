@@ -1,4 +1,15 @@
+import math
 from vectors import Vector
+
+# Function for magnitude of a vector
+def magnitude(v1):
+    if not (isinstance(v1, Vector) or isinstance(v1, list)):
+        raise TypeError("Must be an object of Vector or an array")
+
+    if isinstance(v1, list):
+        v1 = Vector(v1[0], v1[1], v1[2])
+
+    return math.sqrt((v1.get_x() ** 2) + (v1.get_y() ** 2) + (v1.get_z() ** 2))
 
 # Function for dot product of 2 vectors
 def dot_product(v1, v2) -> int:
