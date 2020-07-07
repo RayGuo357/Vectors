@@ -30,7 +30,7 @@ class Vector():
         self.__z = z
 
     def print_vector(self):
-        print("<%s,%s,%s>" % tuple(self.to_array()))
+        print("<%s, %s, %s>" % tuple(self.to_array()))
 
     def to_array(self):
         return [self.get_x(), self.get_y(), self.get_z()]
