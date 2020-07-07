@@ -20,6 +20,23 @@ def difference_points(p1, p2 = Point(0, 0, 0)):
     z = p1.get_z() - p2.get_z()
     return Vector(x, y, z)
 
+# Function to create point from a point and a vector
+def sum_point_vector(p1, v1):
+    if not (isinstance(p1, Point) or isinstance(p1, list)):
+        raise TypeError("'p1' must be an object of Point or an array")
+    if not (isinstance(v1, Vector) or isinstance(v1, list)):
+        raise TypeError("v1 must be an object of Vector or an array")
+
+    if isinstance(p1, list):
+        p1 = Point(p1[0], p1[1], p1[2])
+    if isinstance(v1, list):
+        v1 = Vector(v1[0], v1[1], v1[2])
+
+    x = p1.get_x() + v1.get_x()
+    y = p1.get_x() + v1.get_x()
+    z = p1.get_x() + v1.get_x()
+    return Point(x, y, z)
+
 # Function for magnitude of a vector
 def magnitude(v1):
     if not (isinstance(v1, Vector) or isinstance(v1, list)):
