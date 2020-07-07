@@ -1,13 +1,8 @@
 from vectors import Vector
 
+# Function to clean up code and add functionaliy for arrays as well as obj of Vector
 def assign_var(v1, v2):
-    global x1
-    global y1
-    global z1
-
-    global x2
-    global y2
-    global z2
+    global x1, y1, z1, x2, y2, z2
 
     if isinstance(v1, list):
         x1 = v1[0]
@@ -27,6 +22,7 @@ def assign_var(v1, v2):
         y2 = v2.get_y()
         z2 = v2.get_z()
 
+# Function for dot product of 2 vectors
 def dot_product(v1, v2) -> int:
     if not (isinstance(v1, Vector) or isinstance(v1, list)):
         raise TypeError("v1 must be an object of Vector or an array")
@@ -41,6 +37,7 @@ def dot_product(v1, v2) -> int:
     product += z1 * z2
     return product
 
+# Function for cross product of 2 vectors
 def cross_product(v1, v2) -> Vector:
     if not (isinstance(v1, Vector) or isinstance(v1, list)):
         raise TypeError("v1 must be an object of Vector or an array")
