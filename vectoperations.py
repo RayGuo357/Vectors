@@ -28,7 +28,7 @@ def magnitude(v1):
     if isinstance(v1, list):
         v1 = Vector(v1[0], v1[1], v1[2])
 
-    return math.sqrt([k ** 2 for k in v1.to_array()])
+    return math.sqrt(sum(k ** 2 for k in v1.to_array()))
 
 # Function for dot product of 2 vectors
 def dot_product(v1, v2) -> int:
