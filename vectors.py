@@ -31,3 +31,6 @@ class Vector():
 
     def print_vector(self):
         print("<" + str(self.get_x()) + ", " + str(self.get_y()) + ", " + str(self.get_z()) + ">")
+
+    def to_array(self):
+        return [self.get_x(), self.get_y(), self.get_z()]
