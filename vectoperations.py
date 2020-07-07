@@ -1,5 +1,24 @@
 import math
 from vectors import Vector
+from points import Point
+
+# Function to make a vector out of 2 points
+def difference_points(p1, p2 = Point(0, 0, 0)):
+    if not (isinstance(p1, Point) or isinstance(p1, list)):
+        raise TypeError("'p1' must be an object of Point or an array")
+    if not (isinstance(p2, Point) or isinstance(p2, list)):
+        raise TypeError("'p2' must be an object of Point or an array")
+
+    if isinstance(p1, list):
+        p1 = Point(p1[0], p1[1], p1[2])
+
+    if isinstance(p2, list):
+        p2 = Point(p2[0], p2[1], p2[2])
+
+    x = p1.get_x() - p2.get_x()
+    y = p1.get_y() - p2.get_y()
+    z = p1.get_z() - p2.get_z()
+    return Vector(x, y, z)
 
 # Function for magnitude of a vector
 def magnitude(v1):
