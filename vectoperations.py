@@ -43,11 +43,7 @@ def dot_product(v1, v2) -> int:
     if isinstance(v2, list):
         v2 = Vector(v2[0], v2[1], v2[2])
 
-    product = 0
-    product += v1.get_x() * v2.get_x()
-    product += v1.get_y() * v2.get_y()
-    product += v1.get_z() * v2.get_z()
-    return product
+    return sum(v1.to_array()[k] * v2.to_array()[k] for k in range(3))
 
 # Function for cross product of 2 vectors
 def cross_product(v1, v2) -> Vector:
