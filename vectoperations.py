@@ -15,10 +15,10 @@ def difference_points(p1, p2 = Point(0, 0, 0)):
     if isinstance(p2, list):
         p2 = Point(p2[0], p2[1], p2[2])
 
-    x = p1.get_x() - p2.get_x()
-    y = p1.get_y() - p2.get_y()
-    z = p1.get_z() - p2.get_z()
-    return Vector(x, y, z)
+    x, y, z = p1.to_array()
+    a, b, c = p2.to_array()
+
+    return Vector(x - a, y - b, z - c)
 
 # Function to create point from a point and a vector
 def sum_point_vector(p1, v1):
@@ -45,7 +45,7 @@ def magnitude(v1):
     if isinstance(v1, list):
         v1 = Vector(v1[0], v1[1], v1[2])
 
-    return math.sqrt((v1.get_x() ** 2) + (v1.get_y() ** 2) + (v1.get_z() ** 2))
+    return math.sqrt(sum(k ** 2 for k in v1.to_array()))
 
 # Function for dot product of 2 vectors
 def dot_product(v1, v2) -> int:
@@ -60,11 +60,7 @@ def dot_product(v1, v2) -> int:
     if isinstance(v2, list):
         v2 = Vector(v2[0], v2[1], v2[2])
 
-    product = 0
-    product += v1.get_x() * v2.get_x()
-    product += v1.get_y() * v2.get_y()
-    product += v1.get_z() * v2.get_z()
-    return product
+    return sum(v1.to_array()[k] * v2.to_array()[k] for k in range(3))
 
 # Function for cross product of 2 vectors
 def cross_product(v1, v2) -> Vector:
