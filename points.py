@@ -30,7 +30,7 @@ class Point():
         self.__z = z
 
     def print_point(self):
-        print("(%s,%s,%s)" % tuple(self.to_array()))
+        print("(%s, %s, %s)" % tuple(self.to_array()))
 
     def to_array(self):
         return [self.get_x(), self.get_y(), self.get_z()]
