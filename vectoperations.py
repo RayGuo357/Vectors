@@ -1,7 +1,7 @@
 from vectors import Vector
 
 # Function to clean up code and add functionaliy for arrays as well as obj of Vector
-def assign_var(v1, v2):
+def assign_var(v1 = [0, 0, 0], v2 = [0, 0, 0]):
     global x1, y1, z1, x2, y2, z2
 
     if isinstance(v1, list):
