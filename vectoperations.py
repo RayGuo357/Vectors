@@ -22,6 +22,8 @@ def assign_var(v1 = [0, 0, 0], v2 = [0, 0, 0]):
         y2 = v2.get_y()
         z2 = v2.get_z()
 
+
+
 # Function for dot product of 2 vectors
 def dot_product(v1, v2) -> int:
     if not (isinstance(v1, Vector) or isinstance(v1, list)):
