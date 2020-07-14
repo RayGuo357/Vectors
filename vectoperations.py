@@ -2,6 +2,22 @@ import math
 from vectors import Vector
 from points import Point
 
+# TODO: Unit vector
+#       Scalar
+#       Addition & Subtraction?
+
+# Function to multiply a vector by the scalar
+def scalar(v1, k):
+    if not (isinstance(v1, Vector) or isinstance(v1, list)):
+        raise TypeError("'v1' must be an object of Vector or an array")
+
+    if isinstance(v1, list):
+        v1 = Vector(v1[0], v1[1], v1[2])
+
+    x, y, z = v1.to_array()
+
+    return Vector(x * k, y * k, z * k)
+
 # Function to make a vector out of 2 points
 def difference_points(p1, p2 = Point(0, 0, 0)):
     if not (isinstance(p1, Point) or isinstance(p1, list)):
@@ -46,6 +62,10 @@ def magnitude(v1):
         v1 = Vector(v1[0], v1[1], v1[2])
 
     return math.sqrt(sum(k ** 2 for k in v1.to_array()))
+
+# Function for the unit vector/ normilization of a vector
+def unit_vector(v1):
+    return scalar(v1, 1 / magnitude(v1))
 
 # Function for dot product of 2 vectors
 def dot_product(v1, v2) -> int:
