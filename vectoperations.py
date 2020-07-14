@@ -32,10 +32,10 @@ def sum_point_vector(p1, v1):
     if isinstance(v1, list):
         v1 = Vector(v1[0], v1[1], v1[2])
 
-    x = p1.get_x() + v1.get_x()
-    y = p1.get_x() + v1.get_x()
-    z = p1.get_x() + v1.get_x()
-    return Point(x, y, z)
+    x, y, z = p1.to_array()
+    a, b, c = v1.to_array()
+
+    return Point(x + a, y + b, z + c)
 
 # Function for magnitude of a vector
 def magnitude(v1):
